@@ -1,0 +1,2 @@
+利率小数位数比较多，且没有负值用unsigned double表示
+本金和付款小数位数比较少，且没有负值，应使用unsigned float表示。
