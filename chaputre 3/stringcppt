@@ -2,7 +2,7 @@
 一、初始化方式：
 默认是空字符串
 
-拷贝初始化（使用等号—）：
+拷贝初始化（使用等号）：
 string s2 = s1；         使用另一个对象
 string s3 = "value";     使用字面值常量
 
@@ -35,22 +35,3 @@ s.size()                查询字符个数
 数据成员：
 string::size_type
 */
-
-#include <string>
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    //一次读入一整行
-    string s;
-    getline(cin, s);
-
-    //一次读入一个词
-    string s2;
-    cin >> s2;
-
-    return 0;
-
-
-}

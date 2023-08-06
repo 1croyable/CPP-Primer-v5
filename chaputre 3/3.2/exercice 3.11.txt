@@ -1,0 +1,4 @@
+const string s = "Keep out !"
+for (auto &c : s){/*...*/}
+不合法，s是一个const字符串，不能被修改
+然而调用范围for循环时使用了引用，可能修改s

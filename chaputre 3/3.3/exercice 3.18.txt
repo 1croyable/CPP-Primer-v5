@@ -1,0 +1,4 @@
+不合法
+vector<int> ivec(1);
+ivec[0] = 42;
+或者使用.pushback(42)
