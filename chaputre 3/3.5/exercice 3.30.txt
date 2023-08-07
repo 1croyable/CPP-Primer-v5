@@ -1,0 +1,7 @@
+constexpr size_t array_size = 10;
+int ia[array_size];
+for (size_t ix = 1; ix <= array_size ; ++ix)
+    ia[ix] = ix;
+
+错误：
+当ix = array_size时，循环仍会执行，但是ia[array_size]表示的其实是最大下标的下一个位置，导致溢出（数组的下标从0开始到你指定的大小-1）

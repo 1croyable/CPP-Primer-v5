@@ -8,6 +8,7 @@ vector<T> v = {a,b,c,...};     使用列表
 
 直接初始化（使用括号）：
 vector<T> v2(v1);                             使用另一个对象
+vector<T> v(p1,p2);                           使用一对指针
 
 值初始化：
 vector<T> v(n,val);或者vector<T> v(n)
