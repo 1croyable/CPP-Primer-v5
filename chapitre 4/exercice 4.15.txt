@@ -1,0 +1,5 @@
+double dval; int ival; int *pi;
+dval = ival = pi = 0;
+
+先把0给到pi，这个时候pi是一个空指针，返回pi这个指针本身，
+将指针pi赋值给int类型ival,不合法

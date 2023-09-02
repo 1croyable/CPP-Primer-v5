@@ -1,0 +1,48 @@
+(a)
+if (ival1 != ival2)
+    ival1 = ival2
+else ival1 = ival2 = 0;
+错误：行3结尾漏了分号
+改正：
+if (ival1 != ival2)
+    ival1 = ival2;
+else ival1 = ival2 = 0;
+
+(b)
+if (ival < minval)
+    mval = ival;
+    occurs = 1;
+错误：不是块但是写了2句话
+改正：
+if (ival < minval)
+{
+    mval = ival;
+    occurs = 1;
+}
+
+(c)
+if里面写定义判断的是定义出来的那个值，见test.cpp
+
+if (int ival = get_value())
+    cout << "ival = " << ival << endl;
+if (!ival)
+    cout << "ival = 0\n";
+错误：ival出了作用域，被删除了，
+而且即便ival在外部作用域有定义，比如在前面写有int ival = 0;
+但是当外部的ival是0的时候程序会输出两行，违背了意图。
+改正：
+int ival = get_value();   这里拿出来更清晰，如果不拿出来也可以的，if没有执行的话就会执行else
+if (ival)
+    cout << "ival = " << ival << endl;
+else
+    cout << "ival = 0\n";
+
+
+(d)
+if (ival = 0)
+    ival = get_value();
+错误：等号的逻辑运算符是==
+如果写=，返回的是左侧运算对象那个左值，而那个左值是0，if语句永远不会被执行
+改正：
+if (ival == 0)
+    ival = get_value();

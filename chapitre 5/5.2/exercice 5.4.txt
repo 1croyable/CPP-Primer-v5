@@ -1,0 +1,9 @@
+while (string::iterator iter != s.end()) {/* ... */}
+问题出在iter指向谁？，定义和运算放在一起了
+修改：
+string::iterator iter = s.begin();
+while (iter != s.end()) {/* ... */}
+
+
+while (bool status = find(word)) {/* ... */}
+    if (!status) {/* ... */}

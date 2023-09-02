@@ -1,0 +1,25 @@
+右结合律就是运算对象按照从右往左的顺序组合。因此
+
+            finalgrade = (grade > 90) ? "high pass" : (grade < 60) ? "fail" : "pass";
+
+靠右侧的运算符的运算构成了靠左边的:分支后的内容
+
+            finalgrade = (grade > 90) ? "high pass" : 【 (grade < 60) ? "fail" : "pass" 】;
+
+就会把【】里的当做一个整体，当grade<=90时进行判断
+
+
+
+
+
+左结合律就是运算对象按照从左往右的顺序结合。此时
+
+            finalgrade = (grade > 90) ? "high pass" : (grade < 60) ? "fail" : "pass";
+
+靠左侧的运算构成了靠右边的条件运算符?:的?前的分支
+
+            【 (grade > 90) ? "high pass" : (grade < 60) 】 ? "fail" : "pass";
+
+就会先计算【】里的那个?:运算符，输出的结果再去计算后边的?:运算符
+
+这是很奇怪的，最后结果里不肯能有high pass，只有fail或者pass

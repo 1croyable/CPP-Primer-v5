@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    cout << -30 * 3 + 21 / 5 << endl;
+    cout << -30 + 3 * 21 / 5 << endl;
+    cout << 30 / 3 * 21 % 5 << endl;
+    cout << -30 / 3 * 21 % 4 << endl;
+    return 0;
+}
+//正负号的优先级比较高

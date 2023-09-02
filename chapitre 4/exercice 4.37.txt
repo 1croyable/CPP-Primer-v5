@@ -1,0 +1,4 @@
+(a) pv = reinterprit_cast<void*>(ps)    一般涉及指针或引用就用reinterpret_cast
+(b) i = static_cast<int>(*pc)           只要不包含底层const都可以使用static_cast，一般不涉及指针或引用
+(c) pv = reinterpret_cast<void*>(d)     一般涉及指针或引用就用reinterpret_cast
+(d) pc = pc=reinterpret_cast<char*>(pv) 一般涉及指针或引用就用reinterpret_cast

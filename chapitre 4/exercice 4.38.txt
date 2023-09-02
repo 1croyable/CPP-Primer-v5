@@ -1,0 +1,2 @@
+j/i输出的是int类型
+将这个int类型转换成double后赋值给slope对象

@@ -1,0 +1,2 @@
+else的分支比if分支来得少，else如何确定对应哪个if
+C++规定else跟着离他最近的还未匹配else语句的那个if
